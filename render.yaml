@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: tradingview-telegram-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn tradingview_telegram_bot:app
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: WEBHOOK_SECRET
+        sync: false
