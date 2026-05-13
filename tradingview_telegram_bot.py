@@ -13,9 +13,9 @@ app = Flask(__name__)
 
 # ============= CONFIGURATION =============
 # These will be set as environment variables in Render
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8523623199:AAH8MbUcBOxicEE1wvResOqTRu67lpEBOb4")
-TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "-1003998592148")
-WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "2048")
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "YOUR_CHAT_ID_HERE")
+WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "your_secret_key_here")
 PORT = int(os.environ.get("PORT", 5000))
 
 # Trading Hours Configuration (in 24-hour format)
@@ -26,8 +26,6 @@ TIMEZONE = os.environ.get("TIMEZONE", "Asia/Kolkata")                 # Your tim
 
 # Import timezone support
 from datetime import datetime
-import pytz
-
 
 def send_telegram_message(message):
     """Send a message to Telegram"""
